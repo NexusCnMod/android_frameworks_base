@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="global_action_reboot">重启</string>
+    <!-- Button to reboot the phone, within the Phone Options dialog -->
+    <string name="reboot_system" product="tablet">重启</string>
+    <string name="reboot_system" product="default">重启手机</string>
+
+    <!-- Button to reboot the phone, within the Reboot Options dialog -->
+    <string name="reboot_reboot">正常重启</string>
+    <!-- Button to reboot the phone into recovery, within the Reboot Options dialog -->
+    <string name="reboot_recovery">重启到恢复模式</string>
+    <!-- Button to reboot the phone into bootloader, within the Reboot Options dialog -->
+    <string name="reboot_bootloader">重启到引导模式</string>
+    <!-- Button to reboot the phone into bootmenu, within the Reboot Options dialog -->
+    <string name="reboot_bootmenu">启动菜单</string>
+    <!-- Button to reboot the phone into fastboot, within the Reboot Options dialog -->
+    <string name="reboot_fastboot">快速重启</string>
+    <!-- Button to reboot the phone into download, within the Reboot Options dialog -->
+    <string name="reboot_download">下载</string>
+
+    <!-- Reboot Progress Dialog. This is shown if the user chooses to reboot the phone. -->
+    <string name="reboot_progress">重启中\u2026</string>
+    <!-- Reboot Confirmation Dialog.  When the user chooses to reboot the phone, there will be a confirmation dialog.  This is the message. -->
+    <string name="reboot_confirm" product="tablet">您的平板将重启.</string>
+    <string name="reboot_confirm" product="default">您的手机将重启.</string>
+
+    <string name="app_killed_message">杀死App</string>
+
+    <!-- Title of an application permission that lets an application view/edit revoked permissions. -->
+    <string name="permlab_revokePermissions">允许撤销查看和更改权限.</string>
+    <!-- Description of an application permission that lets lets an application view/edit revoked permissions. -->
+    <string name="permdesc_revokePermissions">允许撤销读写权限.</string>
+
+    <!-- Title of an application permission that lets an application access the ThemeManagerService. -->
+    <string name="permlab_accessThemeService">允许访问主题管理服务.</string>
+    <!-- Description of an application permission that lets lets an application access the ThemeManagerService -->
+    <string name="permdesc_accessThemeService">允许程序 设置/复位 主题.</string>
+
+    <!-- stylus gestures support -->
+    <string name="stylus_app_not_installed">%s 未安装</string>
+
+    <!-- Storage description for the SD card on the dock. [CHAR LIMIT=NONE] -->
+    <string name="storage_sd_dock_card">基座SD卡</string>
+
+    <!-- label for item that toggle mobile data -->
+    <string name="global_actions_toggle_mobile_data">移动数据</string>
+
+    <!-- status message in phone options dialog for when mobile data is on -->
+    <string name="global_actions_mobile_data_on_status">开启移动数据</string>
+
+    <!-- status message in phone options dialog for when mobile data is off -->
+    <string name="global_actions_mobile_data_off_status">关闭移动数据</string>
+
+    <!-- Immersive mode confirmation: Pick confirmation window from bottom when status bar is visible -->
+    <string name="immersive_mode_confirmation_bottom">从底部向上滑动退出全屏.</string>
+</resources> 
