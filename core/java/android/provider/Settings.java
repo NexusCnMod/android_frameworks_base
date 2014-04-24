@@ -1763,6 +1763,7 @@ public final class Settings {
 
         /**
          * If all file types can be accepted over Bluetooth OBEX.
+         * @hide
          */
         public static final String BLUETOOTH_ACCEPT_ALL_FILES =
             "bluetooth_accept_all_files";
@@ -3063,7 +3064,7 @@ public final class Settings {
          */
         public static final String IMMERSIVE_MODE = "immersive_mode";
 
-        /*
+        /**
          * return value last immersive mode
          * @hide
          */
