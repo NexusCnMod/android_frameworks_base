@@ -2700,6 +2700,30 @@ public final class Settings {
         public static final String HEADSET_PLUG_SYSTEM_DEFAULT = "SYSTEM_DEFAULT";
 
         /**
+         * If true, music app will not open if music is active.
+         * @hide
+         */
+        public static final String HEADSET_PLUG_MUSIC_ACTIVE = "headset_plug_music_active";
+
+        /**
+         * Actions when unplug headsets
+         * @hide
+         */
+        public static final String HEADSET_PLUG_ACTIONS = "headset_plug_actions";
+
+        /**
+         * Force actions when unplug headsets
+         * @hide
+         */
+        public static final String HEADSET_PLUG_FORCE_ACTIONS = "headset_plug_force_actions";
+
+        /**
+         * Actions if app is already running
+         * @hide
+         */
+        public static final String HEADSET_PLUG_APP_RUNNING = "headset_plug_app_runnig";
+
+        /**
          * Whether to play sounds when the keyguard is shown and dismissed.
          * @hide
          */
@@ -3360,6 +3384,18 @@ public final class Settings {
          * @hide
          */
         public static final String NAVIGATION_BAR_WIDTH = "navigation_bar_width";
+
+        /**
+         * Navigation bar enable disable for devices that have hw buttons
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
+
+        /**
+         * Disable hw buttons - actions, brightness, haptic feedback, overflow menu
+         * @hide
+         */
+        public static final String HARDWARE_KEYS_DISABLE = "hardware_keys_disable";
 
         /**
          * Volume key controls ringtone or media sound stream
