@@ -11048,20 +11048,14 @@ public class WindowManagerService extends IWindowManager.Stub
         }
         int minDimension = Math.min(mRealDisplayMetrics.widthPixels, mRealDisplayMetrics.heightPixels);
         float scaleRatio = 100.0f / minDimension;
-        int rot = getDefaultDisplayContentLocked().getDisplay().getRotation();
-        rot = (rot + mSfHwRotation) % 4;
         int statusBar = mPolicy.getStatusbarDisplayHeight();
         int navbar = mPolicy.getNavigationbarDisplayHeight(mRotation);
-        int h = Math.round((statusBar + navbar) * scaleRatio);
-        int w = Math.round(h * scaleRatio);
-        int x = h;
-        int y = bitmap.getHeight() - (h - w);
-        if (rot == Surface.ROTATION_90 || rot == Surface.ROTATION_270) {
-            x = bitmap.getWidth() - h;
-        }
-        int colorTop = ColorUtils.getMainColorFromBitmap(bitmap, x, h);
-        int colorBottom = ColorUtils.getMainColorFromBitmap(bitmap, x, y);
-        Log.i(TAG, "Screenshot Color From top=" + colorTop + " bottom=" + colorBottom);
+        int statusBarH = Math.round(statusBar * scaleRatio);
+        int statusBarW = bitmap.getWidth() / 3;
+        int navBarH = Math.round(navbar * scaleRatio);
+        int navBarY = bitmap.getHeight() - (navBarH + statusBarH);
+        int colorTop = ColorUtils.getMainColorFromBitmap(bitmap, statusBarW, statusBarH);
+        int colorBottom = ColorUtils.getMainColorFromBitmap(bitmap, statusBarW, navBarY);
         bitmap.recycle();
         return new int[] {colorTop, colorBottom};
     }

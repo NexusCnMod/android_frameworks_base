@@ -1267,7 +1267,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     }
                     @Override
                     public void onTouchUpCancel() {
-                        sendAppColorBroadcast(40);
+                        sendAppColorBroadcast(300);
                     }
                     @Override
                     public void onDebug() {
@@ -1436,6 +1436,10 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mLongPressOnMenuBehavior = KEY_ACTION_NOTHING;
             mPressOnBackBehavior = KEY_ACTION_NOTHING;
             mLongPressOnBackBehavior = KEY_ACTION_NOTHING;
+            mPressOnAppSwitchBehavior = KEY_ACTION_NOTHING;
+            mLongPressOnAppSwitchBehavior = KEY_ACTION_NOTHING;
+            mPressOnAssistBehavior = KEY_ACTION_NOTHING;
+            mLongPressOnAssistBehavior = KEY_ACTION_NOTHING;
         }
 
         if (DEBUG_INPUT){
@@ -4331,6 +4335,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
         // update since mAllowLockscreenWhenOn might have changed
         updateLockScreenTimeout();
+
+        // update tinted color after layout changes
+        sendAppColorBroadcast(500);
         return changes;
     }
 

@@ -39,6 +39,7 @@ import com.android.internal.util.omni.ColorUtils;
 public class BarTransitions {
     private static final boolean DEBUG = false;
     private static final boolean DEBUG_COLORS = false;
+    private static final boolean DEBUG_TINTED = false;
 
     public static final boolean HIGH_END = ActivityManager.isHighEndGfx();
 
@@ -70,6 +71,10 @@ public class BarTransitions {
         if (HIGH_END) {
             mView.setBackground(mBarBackground);
         }
+    }
+
+    public String getCurrentTag() {
+        return mTag;
     }
 
     public int getMode() {
@@ -116,6 +121,7 @@ public class BarTransitions {
     public void changeColorIconBackground(int bg_color, int ic_color) {
         if (HIGH_END) {
             mBarBackground.applyColorBackground(bg_color);
+            if (DEBUG_TINTED) Log.w(mTag, "process background color");
         }
     }
 
@@ -234,10 +240,6 @@ public class BarTransitions {
             }
         }
 
-        private int getGradientAlphaSemiTransparent() {
-            return mGradientAlpha & 127;
-        }
-
         public void setGradientAlphaDynamic(boolean force) {
             if (force) {
                 mGradientAlpha = 0xff;
@@ -284,7 +286,6 @@ public class BarTransitions {
             if (mMode == MODE_TRANSLUCENT) {
                 targetGradientAlpha = 0xff;
             } else if (mMode == MODE_SEMI_TRANSPARENT) {
-                targetGradientAlpha = getGradientAlphaSemiTransparent();
                 targetColor = mSemiTransparent;
             } else {
                 targetGradientAlpha = getGradientAlphaFromColor();
